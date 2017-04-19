@@ -50,7 +50,7 @@ class Poll():
         center_input = gpio.input(self.center_button)
         left_input = gpio.input(self.left_button)
         right_input = gpio.input(self.right_button)
-        if center_input == True:
+        if center_input == False:
             if self.center_press > 0:
                 if self.DEBUG:
                     print('ADMIN: Console button 2 has been pressed')
@@ -62,7 +62,7 @@ class Poll():
             self.center_press += 1
 
         #Right buttons stuff
-        if right_input == True:
+        if right_input == False:
             if self.right_press > 0:
                 if self.DEBUG:
                     print('ADMIN: Console button 3 has been pressed')
@@ -74,7 +74,7 @@ class Poll():
             self.right_press += 1
 
         #Left button stuff
-        if left_input == True:
+        if left_input == False:
             if self.left_press > 0:
                 if self.DEBUG:
                     print('ADMIN: Console button 1 has been pressed')
