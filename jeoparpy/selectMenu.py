@@ -17,9 +17,13 @@ mainClock = pygame.time.Clock()
 
 class Select_Game():
     def __init__(self, screen):
-        self.BLUE = (18,38,109)
-        self.WHITE = (255, 255, 255)
-        self.YELLOW = (217, 164, 31)
+        # adopted to immoscout colors
+        # background
+        self.BLUE = (242,242,242)
+        # brandblue
+        self.WHITE = (0, 52, 104)
+        # background-brandorange
+        self.YELLOW = (255, 117, 0)
         self.screen = screen
         self.color = [self.BLUE, self.BLUE, self.BLUE, self.BLUE]
         self.options = []

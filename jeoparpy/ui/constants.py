@@ -32,6 +32,7 @@ else:
     _rulesPath = path.join('/media', DEVICE, 'games', directory, 'rules.txt')
     _subPath = path.join('/media', DEVICE, 'games', directory, 'subtitle.txt')
 
-JEOP_BLUE = (16, 26, 124) # RGB color
-SUBTITLE = 'Pi Edition'
+# our grey background
+JEOP_BLUE = (242, 242, 242) # RGB color
+SUBTITLE = 'Scout24 Hackdays - Pi Edition'
 RULES = get_stripped_nonempty_file_lines(_rulesPath)
