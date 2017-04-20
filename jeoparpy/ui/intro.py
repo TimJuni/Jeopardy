@@ -22,7 +22,7 @@ of source code from this file..
 import pygame
 from pygame.locals import KEYDOWN, QUIT
 
-from constants import JEOP_BLUE, RULES, SUBTITLE
+from constants import JEOP_BLUE, RULES, SUBTITLE, COLOR_WHITE, COLOR_BLUE, COLOR_YELLOW
 from resmaps import FONTS, IMAGES
 from util import (draw_centered_textblock, draw_textline, restrict_fontsize,
                   scale, shadow_text, wait_for_keypress)
@@ -81,7 +81,7 @@ def _blit_subtitle(background, scrRect, titleRect):
     size = int(52 * (scrRect.h / 768.0))
     offset = int(20 * (scrRect.h / 768.0))
     font = pygame.font.Font(FONTS['subtitle'], size)
-    text = font.render(SUBTITLE, 1, (255, 255, 255))
+    text = font.render(SUBTITLE, 1, COLOR_WHITE)
 
     # Position subtitle
     rect = text.get_rect()
@@ -131,7 +131,7 @@ def _build_rules(scrRect):
     sfc.fill(JEOP_BLUE)
     headerRect = pygame.Rect((0, int(.05*rect.h)), font.size(header))
     headerRect.centerx = rect.centerx
-    draw_textline(sfc, header, font, (255, 255, 255),
+    draw_textline(sfc, header, font, COLOR_WHITE,
                   headerRect, scale(6, scrRect.h, 768))
 
     # Draw rules
@@ -139,7 +139,7 @@ def _build_rules(scrRect):
     fsize = restrict_fontsize(FONTS['rules'], scale(50, scrRect.h, 768),
                               RULES, bounds)
     font = pygame.font.Font(FONTS['rules'], fsize)
-    draw_centered_textblock(sfc, RULES, font, (255, 255, 255), 0,
+    draw_centered_textblock(sfc, RULES, font, COLOR_WHITE, 0,
                             scale(4, scrRect.h, 768), False)
     sfc.set_alpha(240)
 

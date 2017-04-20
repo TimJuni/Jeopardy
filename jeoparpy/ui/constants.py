@@ -34,5 +34,9 @@ else:
 
 # our grey background
 JEOP_BLUE = (242, 242, 242) # RGB color
+# adopted to immoscout colors
+COLOR_BLUE = (242,242,242) # background
+COLOR_WHITE = (0, 52, 104) # background-brandblue
+COLOR_YELLOW = (255, 117, 0) # background-brandorange
 SUBTITLE = 'Scout24 Hackdays - Pi Edition'
 RULES = get_stripped_nonempty_file_lines(_rulesPath)
