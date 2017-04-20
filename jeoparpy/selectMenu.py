@@ -5,7 +5,7 @@ import pygame, sys, os
 from pygame.locals import *
 from constants import ROOT_PATH
 from config import DRIVE
-from .ui.constants import IS24_GREY
+from .ui.constants import *
 
 pygame.init()
 
@@ -18,15 +18,8 @@ mainClock = pygame.time.Clock()
 
 class Select_Game():
     def __init__(self, screen):
-        # adopted to immoscout colors
-        # background
-        self.BLUE = (242,242,242)
-        # brandblue
-        self.WHITE = (0, 52, 104)
-        # background-brandorange
-        self.YELLOW = (255, 117, 0)
         self.screen = screen
-        self.color = [self.BLUE, self.BLUE, self.BLUE, self.BLUE]
+        self.color = [IS24_BLUE, IS24_BLUE, IS24_BLUE, IS24_BLUE]
         self.options = []
         self.clicked = None
         #Setup select game text
@@ -78,7 +71,7 @@ class Select_Game():
         
     def blitBlocks(self, options, event = None):
         for i in range(0, self.games):          
-            self.optionText = self.jeopFont.render(options[i], True, self.WHITE, self.BLUE)
+            self.optionText = self.jeopFont.render(options[i], True, IS24_BLUE, IS24_GREY)
             self.optionRect = self.optionText.get_rect()
             self.optionRect.centerx = 300
             self.optionRect.centery = i * 53 + 200
@@ -87,24 +80,24 @@ class Select_Game():
                 if event.type == MOUSEMOTION:
                     if i == 0:
                         if event.pos[0] > 300 - self.optionRect.width / 2  and event.pos[0] < 300 - self.optionRect.width / 2  + self.optionRect.width and event.pos[1] > 174 and event.pos[1] < 226:
-                            self.color[0] = self.YELLOW
+                            self.color[0] = IS24_ORANGE
                         else:
-                            self.color[0] = self.BLUE
+                            self.color[0] = IS24_BLUE
                     if i == 1:
                         if event.pos[0] > 300 - self.optionRect.width / 2  and event.pos[0] < 300 - self.optionRect.width / 2  + self.optionRect.width and event.pos[1] > 227 and event.pos[1] < 280:
-                            self.color[1] = self.YELLOW
+                            self.color[1] = IS24_ORANGE
                         else:
-                            self.color[1] = self.BLUE
+                            self.color[1] = IS24_BLUE
                     if i == 2:
                         if event.pos[0] > 300 - self.optionRect.width / 2  and event.pos[0] < 300 - self.optionRect.width / 2  + self.optionRect.width and event.pos[1] > 280 and event.pos[1] < 333:
-                            self.color[2] = self.YELLOW
+                            self.color[2] = IS24_ORANGE
                         else:
-                            self.color[2] = self.BLUE
+                            self.color[2] = IS24_BLUE
                     if i == 3:
                         if event.pos[0] > 300 - self.optionRect.width / 2  and event.pos[0] < 300 - self.optionRect.width / 2  + self.optionRect.width and event.pos[1] > 333 and event.pos[1] < 386:
-                            self.color[3] = self.YELLOW
+                            self.color[3] = IS24_ORANGE
                         else:
-                            self.color[3] = self.BLUE
+                            self.color[3] = IS24_BLUE
 
                 if event.type == MOUSEBUTTONDOWN:
                     if i == 0:
@@ -120,7 +113,7 @@ class Select_Game():
                         if event.pos[0] > 300 - self.optionRect.width / 2  and event.pos[0] < 300 - self.optionRect.width / 2  + self.optionRect.width and event.pos[1] > 333 and event.pos[1] < 386:
                             self.clicked = self.options[i]
                             
-            self.optionText = self.jeopFont.render(options[i], True, self.WHITE, self.color[i])
+            self.optionText = self.jeopFont.render(options[i], True, IS24_GREY, self.color[i])
             self.optionRect = self.optionText.get_rect()
             self.optionRect.centerx = 300
             self.optionRect.centery = i * 53 + 200

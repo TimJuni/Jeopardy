@@ -23,7 +23,7 @@ from sys import exit as sysexit
 import pygame
 from pygame.locals import QUIT, KEYDOWN, K_q
 
-from constants import JEOP_BLUE
+from constants import *
 from resmaps import FONTS, IMAGES
 from util import get_anim_data, scale, shadow_text
 
@@ -113,16 +113,16 @@ class MultiCreditLine(CreditLine):
         spacer.centerx = int(width / 2)
         lineH = font.get_linesize()
 
-        position = [(font.render(s, 1, (200, 200, 200)), s)
+        position = [(font.render(s, 1, IS24_BLUE), s)
                     for s in position]
-        name = [(font.render(s, 1, (255, 255, 255)), s)
+        name = [(font.render(s, 1, IS24_BLUE), s)
                 for s in name]
 
         position = [(s, s.get_rect(), text) for s, text in position]
         name = [(s, s.get_rect(), text) for s, text in name]
 
         sfc = pygame.Surface((width, lineH * max((len(position), len(name)))))
-        sfc.fill(JEOP_BLUE)
+        sfc.fill(IS24_GREY)
 
         for i, (s, rect, text) in enumerate(position):
             rect.right = spacer.left
@@ -251,8 +251,7 @@ def _build_final_lines(group, font, startY, lineW, scrRect):
         if isinstance(s, pygame.Surface):
             line = CreditImage(s, group)
         else:
-            line = SimpleCreditLine(font, s, (255, 255, 255),
-                                      JEOP_BLUE, scale(4, lineW, 1024), group)
+            line = SimpleCreditLine(font, s, IS24_BLUE, IS24_GREY, 0, group)
 
         line.rect.y = startY
         line.rect.centerx = scrRect.centerx
@@ -278,7 +277,7 @@ def _build_multi_lines(group, font, startY, spacer, lineW, scrRect):
     return startY
 
 def _scroll_credits(screen, scrRect, clock, lines, numFrames, step, fpsLimit):
-    screen.fill(JEOP_BLUE)
+    screen.fill(IS24_GREY)
     bg = screen.copy()
     
     for frame in xrange(numFrames):

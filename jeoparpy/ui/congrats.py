@@ -19,7 +19,7 @@ of source code from this file..
 """
 import pygame
 
-from constants import JEOP_BLUE
+from constants import *
 from resmaps import FONTS
 from util import scale
 
@@ -57,7 +57,7 @@ def _animate_congrats(screen, sfc):
     x, y = rect.topleft
 
     for c in word:
-        char = font.render(c, 1, (255, 255, 255), JEOP_BLUE)
+        char = font.render(c, 1, IS24_BLUE, IS24_GREY)
         sfc.blit(char, (x, y))
 
         screen.blit(sfc, (0, 0))
@@ -83,7 +83,7 @@ def _draw_winners(sfc, startY, winners):
     for i, name in winners:
         fName = 'team' + str(i + 1)
         font = pygame.font.Font(FONTS[fName], scale(120, sfcRect.h, 768))
-        text = font.render(name, 1, (255, 255, 255), JEOP_BLUE)
+        text = font.render(name, 1, IS24_BLUE, IS24_GREY)
         tRect = text.get_rect()
         tRect.centerx = rect.centerx
         tRect.y = y
@@ -101,7 +101,7 @@ def _fade_in_sfc(screen, sfc, clock, time):
     """
     lastScreen = screen.copy()
     fpsGoal = int(255.0 / time) # frames to draw / time to spend in secs
-    sfc.fill(JEOP_BLUE)
+    sfc.fill(IS24_GREY)
     
     for alpha in xrange(256):
         sfc.set_alpha(alpha)

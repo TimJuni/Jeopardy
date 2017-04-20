@@ -15,7 +15,7 @@ of source code from this file.
 """
 import pygame
 
-from ..constants import JEOP_BLUE
+from ..constants import *
 from ...constants import ANIMATIONEND
 
 ###############################################################################
@@ -42,7 +42,7 @@ class OpenClueAnimation(pygame.sprite.DirtySprite):
         
         size = self.rect.size
         self.image = pygame.Surface(size)
-        self.image.fill(JEOP_BLUE)
+        self.image.fill(IS24_GREY)
         
         self._startSize = size
         self._startRect = None  # See _init_rects()

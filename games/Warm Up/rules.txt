@@ -1,4 +1,4 @@
-* One hit-the-house team and per turn
-* Answer must be read in full before hit-the-house
+* One hit-the-house per team and per turn
+* Answer must be read in full before you hit-the-house
 * Responses must be in form of a question
 * Don't rip off the house, please

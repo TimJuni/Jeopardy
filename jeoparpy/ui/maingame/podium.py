@@ -18,7 +18,7 @@ import pygame
 
 from jeopgamesfc import JeopGameSurface
 from util import Timer
-from ..constants import JEOP_BLUE
+from ..constants import *
 from ..resmaps import FONTS, IMAGES
 from ..util import (autofit_text, draw_centered_textblock,
                     draw_centered_textline, shadow_text)
@@ -104,7 +104,7 @@ class Podium(pygame.sprite.DirtySprite):
 
     def _draw_name(self, name, fontPath, fontSize, nameBoundsRect):
         sfc = pygame.Surface(nameBoundsRect.size)
-        sfc.fill(JEOP_BLUE)
+        sfc.fill(IS24_BLUE)
         lines, font = autofit_text(fontPath, fontSize, name,
                                    nameBoundsRect.size)
 
@@ -232,7 +232,7 @@ class Score(JeopGameSurface):
         super(Score, self).__init__(size)
 
         self._font = font
-        self._posColor = (255, 255, 255)
+        self._posColor = IS24_BLUE
         self._negColor = (230, 0, 0)
         self._bgColor = bgColor
         self._shadowOffset = shadowOffset
@@ -259,7 +259,7 @@ class JeopScore(Score):
     sets font and positions rect.
     """
     def __init__(self, podiumRect, scalar):
-        bgColor = JEOP_BLUE
+        bgColor = IS24_GREY
         font = pygame.font.Font(FONTS['score'], int(scalar*32))
         pos = tuple(int(scalar*x) for x in (64, 30))
         size = tuple(int(scalar*x) for x in (154, 47))

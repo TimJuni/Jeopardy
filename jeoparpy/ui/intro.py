@@ -22,7 +22,7 @@ of source code from this file..
 import pygame
 from pygame.locals import KEYDOWN, QUIT
 
-from constants import JEOP_BLUE, RULES, SUBTITLE, COLOR_WHITE, COLOR_BLUE, COLOR_YELLOW, IS24_GREY
+from constants import *
 from resmaps import FONTS, IMAGES
 from util import (draw_centered_textblock, draw_textline, restrict_fontsize,
                   scale, shadow_text, wait_for_keypress)
@@ -120,7 +120,7 @@ def _build_banner(scrRect, color):
 
 def _build_rules(scrRect):
     """Return tuple of fully drawn rules surface and its rect."""
-    header = '--RULES--'
+    header = 'Rules:'
     offset = scale(50, scrRect.h, 768)
     rect = scrRect.copy()
     rect.inflate_ip(-offset, -offset)
@@ -128,19 +128,16 @@ def _build_rules(scrRect):
     font = pygame.font.Font(FONTS['rules'], scale(80, scrRect.h, 768))
 
     # Draw header
-    sfc.fill(JEOP_BLUE)
+    sfc.fill(IS24_GREY)
     headerRect = pygame.Rect((0, int(.05*rect.h)), font.size(header))
     headerRect.centerx = rect.centerx
-    draw_textline(sfc, header, font, COLOR_WHITE,
-                  headerRect, scale(6, scrRect.h, 768))
+    draw_textline(sfc, header, font, COLOR_WHITE, headerRect)
 
     # Draw rules
     bounds = tuple(.9*x for x in scrRect.size)
-    fsize = restrict_fontsize(FONTS['rules'], scale(50, scrRect.h, 768),
-                              RULES, bounds)
+    fsize = restrict_fontsize(FONTS['rules'], scale(50, scrRect.h, 768), RULES, bounds)
     font = pygame.font.Font(FONTS['rules'], fsize)
-    draw_centered_textblock(sfc, RULES, font, COLOR_WHITE, 0,
-                            scale(4, scrRect.h, 768), False)
+    draw_centered_textblock(sfc, RULES, font, COLOR_WHITE, 0, 0, False)
     sfc.set_alpha(240)
 
     return sfc, rect

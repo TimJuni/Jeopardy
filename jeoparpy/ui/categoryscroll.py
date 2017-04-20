@@ -21,7 +21,7 @@ of source code from this file.
 import pygame
 
 from config import CATEGORY_HOLD_TIME
-from constants import JEOP_BLUE
+from constants import *
 from resmaps import FONTS
 from util import (autofit_text, BorderedBox, draw_centered_textblock,
                   get_anim_data, shadow_text)
@@ -87,13 +87,12 @@ def _build_box(size, category):
     'size' is size of surface to create.
     """
     borderW = _scale(33, size[1])
-    box = BorderedBox(size, JEOP_BLUE, borderW, (0, 0, 0))
+    box = BorderedBox(size, IS24_GREY, borderW, (0, 0, 0))
     
     lines, font = autofit_text(FONTS['category'], _scale(150, size[1]),
                                category, tuple(.8*x for x in size))
 
-    draw_centered_textblock(box, lines, font,
-                            (255, 255, 255), 0, _scale(7, size[1]))
+    draw_centered_textblock(box, lines, font, IS24_BLUE, 0, _scale(7, size[1]))
 
     return box
 

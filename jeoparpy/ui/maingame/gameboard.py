@@ -18,13 +18,11 @@ from random import shuffle
 import pygame
 
 from jeopgamesfc import JeopGameSurface
-from ..constants import JEOP_BLUE
+from ..constants import *
 from ..resmaps import FONTS
 from ..util import (autofit_text, BorderedBox, draw_centered_textblock,
                     draw_centered_textline, scale)
 from ...constants import ANIMATIONEND
-from ..constants import COLOR_FOR_AMOUNT, COLOR_FOR_CATEGORIES
-
 
 class GameBoard(JeopGameSurface):
     """
@@ -94,8 +92,7 @@ class GameBoard(JeopGameSurface):
         font = autofit_text(FONTS['amount'], self._scale(48),
                             str(amount), bounds)[1]
         
-        draw_centered_textline(box, str(amount),
-                               font, (COLOR_FOR_AMOUNT), 4)
+        draw_centered_textline(box, str(amount), font, IS24_ORANGE, 4)
 
     def _blit_categories(self, categories):
         shadowOffset = self._scale(3)
@@ -105,9 +102,7 @@ class GameBoard(JeopGameSurface):
             lines, font = autofit_text(FONTS['category'], self._scale(32),
                                            c, bounds)
                                        
-            draw_centered_textblock(self._boxes[i][0], lines, font,
-                                    COLOR_FOR_CATEGORIES, 0, shadowOffset)
-
+            draw_centered_textblock(self._boxes[i][0], lines, font, IS24_BLUE, 0, shadowOffset)
     def _draw_all_boxes(self):
         for col in self._boxes:
             for box in col:
@@ -122,10 +117,10 @@ class GameBoard(JeopGameSurface):
         catBottomBorder = 3*borderW
         rightEdgeBorder = 3*borderW
 
-        clueBox = BorderedBox((boxW, boxH), JEOP_BLUE,
+        clueBox = BorderedBox((boxW, boxH), IS24_GREY,
                           borderW, (0, 0, 0))
 
-        catBox = BorderedBox((boxW, boxH), JEOP_BLUE,
+        catBox = BorderedBox((boxW, boxH), IS24_GREY,
                              (borderW, borderW, catBottomBorder, borderW),
                              (0, 0, 0))
 
