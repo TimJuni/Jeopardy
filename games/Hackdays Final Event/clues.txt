@@ -16,9 +16,9 @@ Arc2010
 
 MR 947
 
-Buildmaster
+This person / team was in charge of investigating / fixing a red build
 
-(fehlt noch)
+Lorenz Hahn
 
 
 Joachim Schoss
@@ -27,7 +27,7 @@ Hamster, Sherlock, Watson and UTM
 
 Flavius, Nico and Luca
 
-Oliver Seiler
+Oliver Ueiler
 
 Captain Palumbo
 
