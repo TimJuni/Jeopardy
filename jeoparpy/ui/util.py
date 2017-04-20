@@ -106,7 +106,7 @@ def draw_centered_textblock(sfc, lines, font, color, spacing=0,
     blockRect.center = sfc.get_rect().center
 
     # force shadow OFF
-    shadowOffset=None
+    shadowOffset = None
     return draw_textblock(sfc, lines, font, color, blockRect.topleft,
                           textAlignCenter, spacing, shadowOffset)
         
@@ -117,6 +117,8 @@ def draw_centered_textline(sfc, text, font, color, shadowOffset=None):
     """
     rect = pygame.Rect((0, 0), font.size(text))
     rect.center = sfc.get_rect().center
+    # force shadow OFF
+    shadowOffset = None
     draw_textline(sfc, text, font, color, rect, shadowOffset)
 
     return rect
@@ -148,6 +150,8 @@ def draw_textline(sfc, text, font, color, rect, shadowOffset=None):
     Use position of 'rect' (top left) to position blit.
     """
     s = text
+    # force shadow OFF
+    shadowOffset = None
     doShadow = shadowOffset is not None
     text = font.render(s, 1, color)
 
