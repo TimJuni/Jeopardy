@@ -22,7 +22,7 @@ of source code from this file..
 import pygame
 from pygame.locals import KEYDOWN, QUIT
 
-from constants import JEOP_BLUE, RULES, SUBTITLE, COLOR_WHITE, COLOR_BLUE, COLOR_YELLOW
+from constants import JEOP_BLUE, RULES, SUBTITLE, COLOR_WHITE, COLOR_BLUE, COLOR_YELLOW, IS24_GREY
 from resmaps import FONTS, IMAGES
 from util import (draw_centered_textblock, draw_textline, restrict_fontsize,
                   scale, shadow_text, wait_for_keypress)
@@ -81,7 +81,7 @@ def _blit_subtitle(background, scrRect, titleRect):
     size = int(52 * (scrRect.h / 768.0))
     offset = int(20 * (scrRect.h / 768.0))
     font = pygame.font.Font(FONTS['subtitle'], size)
-    text = font.render(SUBTITLE, 1, COLOR_WHITE)
+    text = font.render(SUBTITLE, 1, IS24_GREY)
 
     # Position subtitle
     rect = text.get_rect()

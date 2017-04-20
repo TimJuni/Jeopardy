@@ -5,6 +5,7 @@ import pygame, sys, os
 from pygame.locals import *
 from constants import ROOT_PATH
 from config import DRIVE
+from .ui.constants import IS24_GREY
 
 pygame.init()
 
@@ -31,7 +32,7 @@ class Select_Game():
         #Setup select game text
         pygame.Surface.set_alpha(self.screen)
         self.jeopFont = pygame.font.Font(os.path.join(ROOT_PATH, 'res', 'fonts', 'gyparody.ttf'), 53)
-        self.selectText = self.jeopFont.render('Select Game', True, self.WHITE)
+        self.selectText = self.jeopFont.render('Select Game', True, IS24_GREY)
         self.selectRect = self.selectText.get_rect()
         self.selectRect.centerx = 300
         self.selectRect[1] = 70
