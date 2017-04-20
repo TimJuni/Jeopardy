@@ -6,7 +6,6 @@ cat 1 question 3
 
 cat 1 question 4
 
-cat 1 question 5
 
 
 
@@ -18,7 +17,6 @@ cat 2 question 3
 
 cat 2 question 4
 
-cat 2 question 5
 
 
 
@@ -30,7 +28,6 @@ cat 3 question 3
 
 cat 3 question 4
 
-cat 3 question 5
 
 
 
@@ -42,4 +39,3 @@ cat 4 question 3
 
 cat 4 question 4
 
-cat 4 question 5
