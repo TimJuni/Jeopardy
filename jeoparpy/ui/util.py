@@ -105,6 +105,8 @@ def draw_centered_textblock(sfc, lines, font, color, spacing=0,
     blockRect = pygame.Rect((0, 0), get_size_textblock(lines, font, spacing))
     blockRect.center = sfc.get_rect().center
 
+    # force shadow OFF
+    shadowOffset=None
     return draw_textblock(sfc, lines, font, color, blockRect.topleft,
                           textAlignCenter, spacing, shadowOffset)
         

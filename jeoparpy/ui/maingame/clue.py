@@ -17,7 +17,7 @@ import pygame
 
 from jeopgamesfc import JeopGameSurface
 from util import Timer
-from ..constants import JEOP_BLUE
+from ..constants import JEOP_BLUE, COLOR_FOR_CLUE_TEXT
 from ..resmaps import FONTS, IMAGES
 from ..util import (autofit_text, draw_centered_textblock, draw_textblock,
                     fit_image, get_size_textblock, restrict_fontsize, scale)
@@ -128,8 +128,7 @@ class Clue(JeopGameSurface):
         sfc = pygame.Surface(size)
         sfc.fill(JEOP_BLUE)
             
-        draw_centered_textblock(sfc, clueLines, font, (255, 255, 255), 0,
-                                scale(4, self.size[1], 720))
+        draw_centered_textblock(sfc, clueLines, font, COLOR_FOR_CLUE_TEXT, 0)
 
         return sfc
         
