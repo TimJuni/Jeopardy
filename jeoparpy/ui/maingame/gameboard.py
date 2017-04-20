@@ -23,6 +23,7 @@ from ..resmaps import FONTS
 from ..util import (autofit_text, BorderedBox, draw_centered_textblock,
                     draw_centered_textline, scale)
 from ...constants import ANIMATIONEND
+from ..constants import COLOR_FOR_AMOUNT, COLOR_FOR_CATEGORIES
 
 
 class GameBoard(JeopGameSurface):
@@ -94,7 +95,7 @@ class GameBoard(JeopGameSurface):
                             str(amount), bounds)[1]
         
         draw_centered_textline(box, str(amount),
-                               font, (217, 164, 31), 4)
+                               font, (COLOR_FOR_AMOUNT), 4)
 
     def _blit_categories(self, categories):
         shadowOffset = self._scale(3)
@@ -105,7 +106,7 @@ class GameBoard(JeopGameSurface):
                                            c, bounds)
                                        
             draw_centered_textblock(self._boxes[i][0], lines, font,
-                                    (255, 255, 255), 0, shadowOffset)
+                                    COLOR_FOR_CATEGORIES, 0, shadowOffset)
 
     def _draw_all_boxes(self):
         for col in self._boxes:

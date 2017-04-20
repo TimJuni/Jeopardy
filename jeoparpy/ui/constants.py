@@ -32,11 +32,20 @@ else:
     _rulesPath = path.join('/media', DEVICE, 'games', directory, 'rules.txt')
     _subPath = path.join('/media', DEVICE, 'games', directory, 'subtitle.txt')
 
-# our grey background
-JEOP_BLUE = (242, 242, 242) # RGB color
-# adopted to immoscout colors
-COLOR_BLUE = (242,242,242) # background
-COLOR_WHITE = (0, 52, 104) # background-brandblue
-COLOR_YELLOW = (255, 117, 0) # background-brandorange
+# immo colors
+IS24_GREY = (242, 242, 242)  #  grey background
+IS24_BLUE = (0, 52, 104) # background-brandblue
+IS24_ORANGE = (255, 117, 0) # background-brandorange
+
+JEOP_BLUE = IS24_GREY
+# color replacements
+COLOR_BLUE = IS24_GREY
+COLOR_WHITE = IS24_BLUE
+COLOR_YELLOW = IS24_ORANGE
+
+# special colors
+COLOR_FOR_AMOUNT = IS24_ORANGE
+COLOR_FOR_CATEGORIES = IS24_BLUE
+
 SUBTITLE = 'Scout24 Hackdays - Pi Edition'
 RULES = get_stripped_nonempty_file_lines(_rulesPath)
