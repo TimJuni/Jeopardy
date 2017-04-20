@@ -2,6 +2,7 @@
 ## Windows
 ############
 .idea
+venv
 
 # Windows image file caches
 Thumbs.db
