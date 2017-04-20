@@ -93,7 +93,7 @@ class GameBoard(JeopGameSurface):
         font = autofit_text(FONTS['amount'], self._scale(48),
                             str(amount), bounds)[1]
         
-        draw_centered_textline(box, '$' + str(amount),
+        draw_centered_textline(box, str(amount),
                                font, (217, 164, 31), 4)
 
     def _blit_categories(self, categories):
