@@ -118,6 +118,7 @@ class Controller(object):
             key = gs.kwargs['coords'] + ('cr', )
             if key in self.audioplayer.sounds:
                 self.audioplayer.play(key)
+            self.audioplayer.play('end')
         elif gs.state == gs.PLAY_CLUE_AUDIO:
             coords = gs.kwargs['coords']
             if coords in self.audioplayer.sounds:
