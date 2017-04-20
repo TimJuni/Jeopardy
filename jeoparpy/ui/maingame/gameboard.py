@@ -95,7 +95,7 @@ class GameBoard(JeopGameSurface):
         draw_centered_textline(box, str(amount), font, IS24_ORANGE, 4)
 
     def _blit_categories(self, categories):
-        shadowOffset = self._scale(3)
+        shadowOffset = 0
         bounds = tuple(.9*x for x in self._boxes[0][0].size)
         
         for i, c in enumerate(categories):

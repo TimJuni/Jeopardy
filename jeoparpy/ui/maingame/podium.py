@@ -225,7 +225,7 @@ class Score(JeopGameSurface):
 
     Call update() to change the score and redraw the surface.
     """
-    def __init__(self, pos, size, font, bgColor, shadowOffset, initial='$0'):
+    def __init__(self, pos, size, font, bgColor, shadowOffset, initial='0'):
         """
         If 'shadowOffset' 0 or None, no shadow will be drawn.
         """
@@ -263,7 +263,7 @@ class JeopScore(Score):
         font = pygame.font.Font(FONTS['score'], int(scalar*32))
         pos = tuple(int(scalar*x) for x in (64, 30))
         size = tuple(int(scalar*x) for x in (154, 47))
-        shadowOffset = max(1, int(scalar*3))
+        shadowOffset = 0
         
         super(JeopScore, self).__init__(pos, size, font, bgColor,
                                         shadowOffset)
