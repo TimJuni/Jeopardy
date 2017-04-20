@@ -1,8 +1,17 @@
 #Poll Raspberry Pi Buttons and control LEDS
 #By Tyler Spadgenske
 
-import RPi.GPIO as gpio
 import time
+try:
+    import RPi.GPIO as gpio
+except ImportError:
+    """
+    import FakeRPi.GPIO as GPIO
+    OR
+    import FakeRPi.RPiO as RPiO
+    """
+
+    import FakeRPi.GPIO as gpio
 
 class Poll():
     def __init__(self):

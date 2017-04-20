@@ -172,26 +172,30 @@ def handle_event_key(event, gameState, gameData):
     elif gs.state == gs.WAIT_ANSWER:
         if event.key == K_SPACE:
             # Re-pass playerI and amount args
-            print(**gs.kwargs)
             gs.set(gs.ANSWER_CORRECT, **gs.kwargs)
         elif event.key == K_BACKSPACE:
             # Re-pass playerI and amount args
-            print(**gs.kwargs)
             gs.set(gs.ANSWER_INCORRECT, **gs.kwargs)
 
     elif gs.state == gs.WAIT_CHOOSE_CLUE:
         if event.key == K_o:
-            //team 3 mehr punkte
+            print 'team 3 mehr punkte'
+            gs.set(gs.ANSWER_CORRECT, amount = 100, playerI = 2)
         elif event.key == K_l:
-            //team 3 weniger punkte
+            print 'team 3 weniger punkte'
+            gs.set(gs.ANSWER_CORRECT, amount = -100, playerI = 2)
         elif event.key == K_i:
-            // team 2 mehr punkte
+            print 'team 2 mehr punkte'
+            gs.set(gs.ANSWER_CORRECT, amount = 100, playerI = 1)
         elif event.key == K_k:
-            // tean 2 weniger punkte
+            print 'team 2 weniger punkte'
+            gs.set(gs.ANSWER_CORRECT, amount = -100, playerI = 1)
         elif event.key == K_u:
-            // team 1 mehr punkte
-        elif event.key == K_j
-            // team 1 weniger punkte
+            print 'team 1 mehr punkte'
+            gs.set(gs.ANSWER_CORRECT, amount = 100, playerI = 0)
+        elif event.key == K_j:
+            print 'team 1 weniger punkte'
+            gs.set(gs.ANSWER_CORRECT, amount = -100, playerI = 0)
 
 def handle_event_mousebuttondown(event, gameState, uicontroller):
     gs = gameState
