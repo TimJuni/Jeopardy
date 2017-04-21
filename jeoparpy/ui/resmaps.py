@@ -67,8 +67,7 @@ _cluesPath = path.join(ROOT_PATH, 'res', 'sounds', 'clues', '')
 #          dictionary. If not using clue images, change the line
 #          below to: IMAGES = {}
 IMAGES = {
-(0, 1) : _imgPath + 'brainfuck.png',
-(0, 3) : _imgPath + 'chef.png'}
+}
 
 ###############################################################################
 # INSTRUCTIONS TO ADD YOUR OWN RECORDED CLUE READINGS OR AUDIO CLUES:
