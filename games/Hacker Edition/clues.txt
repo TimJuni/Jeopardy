@@ -20,9 +20,7 @@
 100700 MAIN-LOGIC-EXIT.
 100800     EXIT.
 
-++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.
-
-
+brainfuck.png
 
 DO ,1 <- #13
 PLEASE DO ,1 SUB #1 <- #238
@@ -40,8 +38,6 @@ DO ,1 SUB #12 <- #16
 DO ,1 SUB #13 <- #162
 PLEASE READ OUT ,1
 PLEASE GIVE UP
-
-
 
 Hello World Souffle.
 This recipe prints the immortal words "Hello world!", in a basically brute force way. It also makes a lot of food for one person.
