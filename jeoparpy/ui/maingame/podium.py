@@ -104,7 +104,7 @@ class Podium(pygame.sprite.DirtySprite):
 
     def _draw_name(self, name, fontPath, fontSize, nameBoundsRect):
         sfc = pygame.Surface(nameBoundsRect.size)
-        sfc.fill((16, 26, 124))
+        sfc.fill(IS24_BLUE)
         lines, font = autofit_text(fontPath, fontSize, name,
                                    nameBoundsRect.size)
 
