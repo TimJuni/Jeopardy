@@ -1,26 +1,34 @@
-cat 1 question 1
+Andreasstrasse 10
 
 30,75 Euro
 
-cat 1 question 3
+14th of July 2017
 
-cat 1 question 4
+This company serves warm food between 11:30 am - 3 pm
 
 
 CEO of Scout24
 
 Image:
 
-cat 2 question 3
+This nice person runs the backoffice, like, forever
 
-cat 2 question 4
+???
 
 
-cat 3 question 1
+MVP
 
-cat 3 question 2
+GAC
 
-cat 3 question 3
+OBID
 
-cat 3 question 4
+TAR
 
+
+mkdir scout
+
+???
+
+???
+
+HTTP 418
