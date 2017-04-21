@@ -78,3 +78,25 @@ lol iz 100
 rofl lol
 lol iz 33
 rofl lol
+
+
+cat 2 -1
+
+cat 2 -2
+
+cat 2 -3
+
+cat 2 -4
+
+cat 2 -5
+
+
+cat 3 -1
+
+cat 3 -2
+
+cat 3 -3
+
+cat 3 -4
+
+cat 3 -5
