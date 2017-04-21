@@ -92,7 +92,7 @@ def _build_box(size, category):
     lines, font = autofit_text(FONTS['category'], _scale(150, size[1]),
                                category, tuple(.8*x for x in size))
 
-    draw_centered_textblock(box, lines, font, IS24_BLUE, 0, _scale(7, size[1]))
+    draw_centered_textblock(box, lines, font, IS24_BLUE, 0, _scale(4, size[1]))
 
     return box
 

@@ -132,8 +132,7 @@ class MultiCreditLine(CreditLine):
         for i, (s, rect, text) in enumerate(name):
             rect.left = spacer.right
             rect.top = i*lineH
-            shadow, shadRect = shadow_text(text, rect, font,
-                                           scale(3, width, 1024))
+            shadow, shadRect = shadow_text(text, rect, font, 0)
 
             sfc.blit(shadow, shadRect)
             sfc.blit(s, rect)
@@ -169,7 +168,8 @@ class SimpleCreditLine(CreditLine):
         self.rect = self.image.get_rect()
 
 ###############################################################################
-positions = ('Programmer/Designer', 'Programmer',
+positions = ('IS24 Hackdays Extension',
+             'Programmer/Designer', 'Programmer',
              'Research',
              'Research Assistant',
              'Writer',
@@ -183,7 +183,8 @@ positions = ('Programmer/Designer', 'Programmer',
              'Assistant to Mr. Madill'
              )
 
-names = ('Adam Beagle','Tyler Spadgenske',
+names = (('Felix Borchers','Sebastian Nachtigall','Stefan Meiwald'),
+         'Adam Beagle','Tyler Spadgenske',
          'Claire Madill',
          "Starla 'Kitty Kitty' Warla",
          'Adam Beagle',
@@ -216,9 +217,7 @@ def do_credits(screen, clock, audioPlayer, fpsLimit):
     spacer = scale(50, lineW, 1024) #Y-space between lines
 
     startY = _build_multi_lines(lines, font, startY, spacer, lineW, scrRect)
-    finalLineBottom = _build_final_lines(lines, font,
-                                         startY + scale(100, lineW, 1024),
-                                         lineW,scrRect)
+    finalLineBottom = _build_final_lines(lines, font, startY + scale(100, lineW, 1024), lineW,scrRect)
     
     numFrames, step, fpsLimit = get_anim_data(33.2, -1*finalLineBottom,
                                               fpsLimit)
@@ -236,7 +235,7 @@ def _blit_thanks(screen, text, font, scrRect, lineW):
     thanks = font.render(text, 1, (255, 255, 255))
     rect = thanks.get_rect()
     rect.center = scrRect.center
-    shadow, shadRect = shadow_text(text, rect, font, scale(3, lineW, 1024))
+    shadow, shadRect = shadow_text(text, rect, font, 0)
     
     screen.blit(shadow, shadRect)
     screen.blit(thanks, rect)

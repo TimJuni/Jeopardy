@@ -48,7 +48,7 @@ class JeopPlayer(object):
     @property
     def scoref(self):
         neg = '-' * int(self.score < 0)
-        return "%s$%d" % (neg, abs(self.score))
+        return "%s%d" % (neg, abs(self.score))
 
 ###############################################################################
 class ScoreError(Exception):

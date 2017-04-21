@@ -162,9 +162,9 @@ def _build_title_text(scrRect, bgColor):
     return (text, rect)
 
 def _fade_in_title(screen, background, text, textRect, bannerColor, clock):
-    fpsGoal = int(255 / 7.8) #frames to draw / time to spend in secs
+    fpsGoal = int(255 / 5.8) #frames to draw / time to spend in secs
 
-    pygame.time.delay(2000)
+    pygame.time.delay(500)
     for alpha in xrange(256):
         background.fill(bannerColor, textRect)
         text.set_alpha(alpha)
