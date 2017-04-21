@@ -67,7 +67,7 @@ _cluesPath = path.join(ROOT_PATH, 'res', 'sounds', 'clues', '')
 #          dictionary. If not using clue images, change the line
 #          below to: IMAGES = {}
 IMAGES = {
-(0, 1) : _imgPath + 'brainfuck.png',
+(1, 1) : _imgPath + 'scoutie.png',
 (0, 4) : _imgPath + 'chef.png',
 }
 
