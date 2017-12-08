@@ -1,0 +1,45 @@
+22
+
+HTTPS
+
+DNS
+
+123
+
+110
+
+sort [] = []  
+sort (x:xs) =
+    let smallerSorted = sort [a | a <- xs, a <= x]
+        biggerSorted = sort [a | a <- xs, a > x]
+    in  smallerSorted ++ [x] ++ biggerSorted
+
+Arc2010
+
+MR 947
+
+This person / team was in charge of investigating / fixing a red build
+
+Lorenz Hahn
+
+
+Joachim Schoss
+
+Hamster, Sherlock, Watson and UTM
+
+Flavius, Nico and Luca
+
+Oliver Zeiler
+
+Captain Palumbo
+
+
+XUP
+
+KPI
+
+VIA
+
+TuV
+
+TERMS

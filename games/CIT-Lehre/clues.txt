@@ -1,0 +1,43 @@
+VPN
+
+Die Summe aller Massnahmen um Personen und Benutzer in IT-Systemen eindeutig zu erkennen.
+
+RAID
+
+LDAP
+
+Ein Koeder für potentielle Angreifer.
+
+
+Die Programme eines digitalen Rechensystems, die die Grundlage der moeglichen Betriebsarten
+des digitalen Rechensystems bilden.
+
+Zum Beispiel SJN, SRTN oder RR.
+
+Operationsfolgen, bei denen eine nebenlaeufige oder verzahnte Ausfuehrung zu Fehlern fuehren kann.
+
+Die Abarbeitung bestimmter Operationen wird dauerhaft gestoppt und kein Fortschritt ist moeglich.
+
+Das geht mit fork()
+
+
+PaaS
+
+EC2
+
+Zwei wichtige second-order Funktionen.
+
+Das CAP Theorem
+
+A read operation is based on all writes that were seen by previous reads.
+
+
+Paxos
+
+ACID
+
+Die Benutzer wissen nicht, wo sich bestimmte Betriebsmittel befinden.
+
+There is no global clock, messages can be delayed arbitrarily.
+
+Der Bully Algorithmus
